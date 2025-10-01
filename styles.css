@@ -38,7 +38,8 @@ header nav a {
   height: 100vh;
   color: white;
   padding: 70px;
-  gap: 25px; 
+  gap: 25px;
+  background-color: aqua;
 }
 
 .nom-container {
@@ -64,17 +65,17 @@ header nav a {
 
 .apropos {
   display: grid;
-  grid-template-rows: auto 1fr; /* row 1 = titre, row 2 = contenu */
   align-items: center; 
   height: 100vh;
-  padding-top: 70px;
   color: white;
   max-width: 1100px; /* autre maniere pour largeur contenue? */
   margin: 0 auto;
+  background-color: aqua;
 }
 
 .apropos h2 {
   font-size: 6rem;
+  background-color: brown;
 }
 
 .apropos-container {
@@ -97,21 +98,24 @@ header nav a {
   display: grid;
   row-gap: 60px;
   align-items: center; 
-  height: 100vh;
-  padding-top: 70px;
+  height: 10vh;
   color: white;
   max-width: 1100px; /* autre maniere pour largeur contenue? */
   margin: 0 auto;
+  background-color: aqua;
 }
 
 .projets h2 {
   font-size: 6rem;
 }
 
+/**/
+
 .projet1 {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 70px;
+  background-color: brown;
 }
 
 .projet1 img {
