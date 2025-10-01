@@ -1,0 +1,147 @@
+body {
+  background-color: black;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 20px 20px;
+  position: relative;
+  /* position? */
+}
+
+header h1 {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  /* transform et margin? */
+  color: yellow;
+}
+
+header nav a {
+  color: white;
+}
+
+header nav {
+  display: flex;
+  gap: 42px;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* 3/4 pour le nom, 1/4 pour le paragraphe */
+  align-items: center; /* centre verticalement */
+  height: 100vh;
+  color: white;
+  padding: 70px;
+  gap: 25px; /* espace entre nom et paragraphe */
+}
+
+.nom-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.prenom {
+  font-size: 10rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.nom {
+  font-size: 10rem;
+  font-weight: bold;
+  margin: 0;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.apropos {
+  display: grid;
+  grid-template-rows: auto 1fr; /* row 1 = titre, row 2 = contenu */
+  align-items: center; /* centre verticalement */
+  height: 100vh;
+  padding-top: 70px;
+  color: white;
+  max-width: 1100px; /* autre maniere pour largeur contenue? */
+  margin: 0 auto;
+}
+
+.apropos h2 {
+  font-size: 6rem;
+}
+
+.apropos-container {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 paragraphe à gauche, 1/3 image à droite */
+  column-gap: 70px;
+}
+
+.apropos-container p {
+  font-size: 1.2rem;
+  align-self: center;
+}
+
+.apropos-container img {
+  width: 320;
+  height: auto;
+}
+
+.projets {
+  display: grid;
+  row-gap: 60px;
+  align-items: center; /* centre verticalement */
+  height: 100vh;
+  padding-top: 70px;
+  color: white;
+  max-width: 1100px; /* autre maniere pour largeur contenue? */
+  margin: 0 auto;
+}
+
+.projets h2 {
+  font-size: 6rem;
+}
+
+.projet1 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 70px;
+}
+
+.projet1 img {
+  width: 300px; /* largeur souhaitée */
+  height: auto;
+}
+
+.projet1 .descprojet1 {
+  align-self: center;
+}
+
+.projet1 .descprojet1 h3 {
+  font-size: 2rem;
+}
+
+/**/
+
+.projet2 {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  column-gap: 70px;
+}
+
+.projet2 img {
+  width: 300px; /* largeur souhaitée */
+  height: auto;
+}
+
+.projet2 .descprojet2 {
+  align-self: center;
+}
+
+.projet2 .descprojet2 h3 {
+  font-size: 2rem;
+}
