@@ -32,11 +32,11 @@ header nav {
 .hero {
   display: grid;
   grid-template-columns: 3fr 1fr; /* 3/4 pour le nom, 1/4 pour le paragraphe */
-  align-items: center; /* centre verticalement */
+  align-items: center; 
   height: 100vh;
   color: white;
   padding: 70px;
-  gap: 25px; /* espace entre nom et paragraphe */
+  gap: 25px; 
 }
 
 .nom-container {
@@ -63,7 +63,7 @@ header nav {
 .apropos {
   display: grid;
   grid-template-rows: auto 1fr; /* row 1 = titre, row 2 = contenu */
-  align-items: center; /* centre verticalement */
+  align-items: center; 
   height: 100vh;
   padding-top: 70px;
   color: white;
@@ -94,7 +94,7 @@ header nav {
 .projets {
   display: grid;
   row-gap: 60px;
-  align-items: center; /* centre verticalement */
+  align-items: center; 
   height: 100vh;
   padding-top: 70px;
   color: white;
@@ -113,7 +113,7 @@ header nav {
 }
 
 .projet1 img {
-  width: 300px; /* largeur souhaitée */
+  width: 300px; 
   height: auto;
 }
 
@@ -134,7 +134,7 @@ header nav {
 }
 
 .projet2 img {
-  width: 300px; /* largeur souhaitée */
+  width: 300px; 
   height: auto;
 }
 
