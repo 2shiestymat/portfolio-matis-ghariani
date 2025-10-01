@@ -2,6 +2,8 @@ body {
   background-color: black;
 }
 
+/* Navbar et header */
+
 header {
   display: flex;
   align-items: center;
@@ -30,6 +32,8 @@ header nav {
 header nav a {
   color: white;
 }
+
+/* Acceuil */
 
 .hero {
   display: grid;
@@ -63,6 +67,8 @@ header nav a {
   font-size: 1.2rem;
 }
 
+/* À propos */
+
 .apropos {
   display: grid;
   align-items: center; 
@@ -93,6 +99,8 @@ header nav a {
   width: 320;
   height: auto;
 }
+
+/* Projets */
 
 .projets {
   display: grid;
@@ -137,6 +145,7 @@ header nav a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 70px;
+  background-color: brown;
 }
 
 .projet2 img {
