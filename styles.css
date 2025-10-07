@@ -143,6 +143,11 @@ header nav a {
   column-gap: 38px;
 }
 
+.imagecompetences img {
+  height: 80px;
+  width: 80px;
+}
+
 /* Projets */
 
 .projets {
