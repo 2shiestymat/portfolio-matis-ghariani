@@ -108,7 +108,7 @@ header nav a {
   padding-bottom: 40px;
   background-color: green;
   color: transparent; /* Pas de couleur de remplissage */
-  -webkit-text-stroke: 0.1px white; /* Épaisseur + couleur du contour */
+  -webkit-text-stroke: 0.6px white; /* Épaisseur + couleur du contour */
 }
 
 .apropos-container {
@@ -133,7 +133,7 @@ header nav a {
   display: grid;
   align-items: center;
   justify-content: center;
-  max-width: 1100px; /* autre maniere pour largeur contenue? */
+  max-width: 1100px; 
   margin: 0 auto;
 }
 
@@ -154,7 +154,7 @@ header nav a {
   display: grid;
   align-items: center;
   color: white;
-  max-width: 1100px; /* autre maniere pour largeur contenue? */
+  max-width: 1100px; 
   margin: 0 auto;
   background-color: brown;
 }
@@ -164,6 +164,8 @@ header nav a {
   margin: 0;
   padding-bottom: 40px;
   background-color: green;
+  color: transparent; /* Pas de couleur de remplissage */
+  -webkit-text-stroke: 0.6px white; /* Épaisseur + couleur du contour */
 }
 
 /* 1 */
@@ -215,25 +217,34 @@ header nav a {
 /* Version petite / mobile */
 
 @media screen and (max-width: 810px) {
-  .nom-container {
-    text-align: center;
-  }
 
   .hero > div {
     grid-template-columns: 1fr;
+    height: auto;
+    padding-top: 300px;
+  }
+
+  .nom-container {}
+  
+  .prenom {
+    font-size: 8rem;
+  }
+  
+  .nom {
+    font-size: 8rem;
   }
 
   header {
-    justify-content: space-between; /* H1 à gauche, nav à droite */
+    justify-content: space-between; 
   }
 
   header h1 {
-    position: static; /* supprime l'absolute */
-    transform: none; /* supprime le translate */
+    position: static; 
+    transform: none; 
   }
 
   header nav {
-    margin-right: 20px; /* optionnel, juste pour réduire l'espace */
+    margin-right: 20px;
   }
 
   .apropos h2 {
@@ -242,19 +253,13 @@ header nav a {
   }
 
   .apropos-container {
-    display: grid;
-    grid-template-columns: 1fr; /* une seule colonne */
-    row-gap: 20px; /* espace entre image et texte */
-    justify-items: center; /* centre horizontalement chaque élément de la grille */
-    text-align: center; /* centre le texte du paragraphe */
+    grid-template-columns: 1fr; 
+    justify-items: center; 
+    text-align: center; 
   }
 
   .apropos-container img {
-    width: 60%; /* image pleine largeur ou adapte selon ton besoin */
+    width: 60%;
     height: auto;
-  }
-
-  .apropos-container p {
-    font-size: 1rem; /* optionnel : réduire un peu le texte sur mobile */
   }
 }
