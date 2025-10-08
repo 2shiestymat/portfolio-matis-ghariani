@@ -213,3 +213,48 @@ header nav a {
 }
 
 /* aiiiiiii*/
+
+@media screen and (max-width: 810px) {
+  .nom-container {
+    text-align: center;
+  }
+
+  .hero > div {
+    grid-template-columns: 1fr;
+  }
+
+  header {
+    justify-content: space-between; /* H1 à gauche, nav à droite */
+  }
+
+  header h1 {
+    position: static; /* supprime l'absolute */
+    transform: none; /* supprime le translate */
+  }
+
+  header nav {
+    margin-right: 20px; /* optionnel, juste pour réduire l'espace */
+  }
+
+  .apropos h2 {
+    justify-items: center;
+    text-align: center;
+  }
+
+  .apropos-container {
+    display: grid;
+    grid-template-columns: 1fr; /* une seule colonne */
+    row-gap: 20px; /* espace entre image et texte */
+    justify-items: center; /* centre horizontalement chaque élément de la grille */
+    text-align: center; /* centre le texte du paragraphe */
+  }
+
+  .apropos-container img {
+    width: 60%; /* image pleine largeur ou adapte selon ton besoin */
+    height: auto;
+  }
+
+  .apropos-container p {
+    font-size: 1rem; /* optionnel : réduire un peu le texte sur mobile */
+  }
+}
