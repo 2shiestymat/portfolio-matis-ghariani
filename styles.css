@@ -134,7 +134,7 @@ header nav a {
 }
 
 .apropos-container img {
-  width: 320;
+  width: 390px;
   height: auto;
 }
 
@@ -232,9 +232,6 @@ header nav a {
     grid-template-columns: 1fr;
     height: auto;
     padding-top: 300px;
-  }
-
-  .nom-container {
   }
 
   .prenom {
