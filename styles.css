@@ -13,9 +13,23 @@
   src: url("./font/Onest-Medium.ttf") format("truetype");
 }
 
+:root {
+  --white-transparent: rgba(255, 255, 255, 0.1);
+  --white: #f4f4f4;
+  --yellow: #edd11b;
+  --blue: #94e7ec;
+  --white-hover: #dad9d9;
+  --blue-hover: #37b7bf;
+}
+
 body {
   background-color: black;
-  font-family: "Onest";
+  font-family: "Onest-semi-bold";
+}
+
+p {
+  font-family: "Onest-medium";
+  font-size: 1.4rem;
 }
 
 /* Navbar et header */
@@ -33,22 +47,23 @@ header h1 {
   left: 50%;
   transform: translateX(-50%);
   margin: 0;
-  color: yellow;
+  color: var(--yellow);
   font-family: "Onest-semi-bold";
 }
 
 header nav {
   display: flex;
   gap: 42px;
-  background-color: brown;
   margin-right: 70px;
-  border: solid brown;
-  border-width: 12px 28px;
+  background-color: var(--white-transparent);
+  border: solid var(--white-transparent);
+  background-clip: padding-box;
+  border-width: 12px 40px;
   border-radius: 40px;
 }
 
 header nav a {
-  color: white;
+  color: var(--white);
   font-family: "Onest-medium";
 }
 
@@ -63,7 +78,7 @@ header nav a {
   grid-template-columns: 3fr 1fr; /* 3/4 pour le nom, 1/4 pour le paragraphe */
   align-items: center;
   height: 100vh;
-  color: white;
+  color: var(--white);
   padding: 70px;
   gap: 25px;
   max-width: 1900px;
@@ -73,22 +88,19 @@ header nav a {
 .nom-container {
   display: flex;
   flex-direction: column;
+  font-family: "Onest";
 }
 
 .prenom {
-  font-size: 10rem;
+  font-size: 9rem;
   font-weight: bold;
   margin: 0;
 }
 
 .nom {
-  font-size: 10rem;
+  font-size: 9rem;
   font-weight: bold;
   margin: 0;
-}
-
-.hero p {
-  font-size: 1.2rem;
 }
 
 /* À propos */
@@ -96,7 +108,7 @@ header nav a {
 .apropos {
   display: grid;
   align-items: center;
-  color: white;
+  color: var(--white);
   max-width: 1100px; /* autre maniere pour largeur contenue? */
   margin: 0 auto;
   background-color: red;
@@ -108,7 +120,7 @@ header nav a {
   padding-bottom: 40px;
   background-color: green;
   color: transparent; /* Pas de couleur de remplissage */
-  -webkit-text-stroke: 0.6px white; /* Épaisseur + couleur du contour */
+  -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
 }
 
 .apropos-container {
@@ -118,7 +130,6 @@ header nav a {
 }
 
 .apropos-container p {
-  font-size: 1.2rem;
   align-self: center;
 }
 
@@ -133,7 +144,7 @@ header nav a {
   display: grid;
   align-items: center;
   justify-content: center;
-  max-width: 1100px; 
+  max-width: 1100px;
   margin: 0 auto;
 }
 
@@ -153,8 +164,8 @@ header nav a {
 .projets {
   display: grid;
   align-items: center;
-  color: white;
-  max-width: 1100px; 
+  color: var(--white);
+  max-width: 1100px;
   margin: 0 auto;
   background-color: brown;
 }
@@ -165,7 +176,7 @@ header nav a {
   padding-bottom: 40px;
   background-color: green;
   color: transparent; /* Pas de couleur de remplissage */
-  -webkit-text-stroke: 0.6px white; /* Épaisseur + couleur du contour */
+  -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
 }
 
 /* 1 */
@@ -217,30 +228,30 @@ header nav a {
 /* Version petite / mobile */
 
 @media screen and (max-width: 810px) {
-
   .hero > div {
     grid-template-columns: 1fr;
     height: auto;
     padding-top: 300px;
   }
 
-  .nom-container {}
-  
+  .nom-container {
+  }
+
   .prenom {
     font-size: 8rem;
   }
-  
+
   .nom {
     font-size: 8rem;
   }
 
   header {
-    justify-content: space-between; 
+    justify-content: space-between;
   }
 
   header h1 {
-    position: static; 
-    transform: none; 
+    position: static;
+    transform: none;
   }
 
   header nav {
@@ -250,12 +261,13 @@ header nav a {
   .apropos h2 {
     justify-items: center;
     text-align: center;
+    font-size: 5rem;
   }
 
   .apropos-container {
-    grid-template-columns: 1fr; 
-    justify-items: center; 
-    text-align: center; 
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
   }
 
   .apropos-container img {
