@@ -49,22 +49,28 @@ header h1 {
   margin: 0;
   color: var(--yellow);
   font-family: "Onest-semi-bold";
+  font-size: 1.7rem;
 }
 
 header nav {
   display: flex;
   gap: 42px;
-  margin-right: 70px;
   background-color: var(--white-transparent);
   border: solid var(--white-transparent);
   background-clip: padding-box;
-  border-width: 12px 40px;
+  border-width: 15px 42px;
   border-radius: 40px;
 }
 
 header nav a {
   color: var(--white);
   font-family: "Onest-medium";
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.projetspecial {
+  color: var(--blue);
 }
 
 /* Acceuil */
@@ -88,7 +94,6 @@ header nav a {
 .nom-container {
   display: flex;
   flex-direction: column;
-  font-family: "Onest";
 }
 
 .prenom {
