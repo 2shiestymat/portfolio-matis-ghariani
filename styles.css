@@ -76,14 +76,13 @@ header nav a {
 /* Acceuil */
 
 .hero {
-  background-color: aqua;
+  padding-top: 130px;
 }
 
 .hero > div {
   display: grid;
   grid-template-columns: 3fr 1fr; /* 3/4 pour le nom, 1/4 pour le paragraphe */
   align-items: center;
-  height: 100vh;
   color: var(--white);
   padding: 70px;
   gap: 25px;
@@ -94,16 +93,17 @@ header nav a {
 .nom-container {
   display: flex;
   flex-direction: column;
+  line-height: 1.25;
 }
 
 .prenom {
-  font-size: 9rem;
+  font-size: 10rem;
   font-weight: bold;
   margin: 0;
 }
 
 .nom {
-  font-size: 9rem;
+  font-size: 10rem;
   font-weight: bold;
   margin: 0;
 }
@@ -116,14 +116,13 @@ header nav a {
   color: var(--white);
   max-width: 1100px; /* autre maniere pour largeur contenue? */
   margin: 0 auto;
-  background-color: red;
+  padding-top: 120px;
 }
 
 .apropos h2 {
   font-size: 6rem;
   margin: 0;
   padding-bottom: 40px;
-  background-color: green;
   color: transparent; /* Pas de couleur de remplissage */
   -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
 }
@@ -151,17 +150,18 @@ header nav a {
   justify-content: center;
   max-width: 1100px;
   margin: 0 auto;
+  padding-top: 80px;
 }
 
 .imagecompetences {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  column-gap: 38px;
+  column-gap: 45px;
 }
 
 .imagecompetences img {
-  height: 80px;
-  width: 80px;
+  height: 65px;
+  width: 65px;
 }
 
 /* Projets */
@@ -172,14 +172,13 @@ header nav a {
   color: var(--white);
   max-width: 1100px;
   margin: 0 auto;
-  background-color: brown;
+  padding-top: 190px;
 }
 
 .projets h2 {
   font-size: 6rem;
   margin: 0;
   padding-bottom: 40px;
-  background-color: green;
   color: transparent; /* Pas de couleur de remplissage */
   -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
 }
@@ -190,8 +189,7 @@ header nav a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 25px;
-  margin-bottom: 60px;
-  background-color: pink;
+  padding-top: 30px;
 }
 
 .projet1 img {
@@ -204,7 +202,7 @@ header nav a {
 }
 
 .projet1 .descprojet1 h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 /* 2 */
@@ -213,8 +211,7 @@ header nav a {
   display: grid;
   grid-template-columns: 1fr 2fr;
   column-gap: 25px;
-  margin-bottom: 60px;
-  background-color: pink;
+  padding-top: 60px;
 }
 
 .projet2 img {
@@ -227,7 +224,7 @@ header nav a {
 }
 
 .projet2 .descprojet2 h3 {
-  font-size: 2rem;
+  font-size: 1.7rem;
 }
 
 /* Version petite / mobile */
