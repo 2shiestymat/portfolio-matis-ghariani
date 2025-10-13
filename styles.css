@@ -184,24 +184,31 @@ header nav a {
   -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
 }
 
-.projet1 {
+.projectscontainer {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 17px;
-  padding-top: 40px;
-}
-
-.projet1 img {
-  width: 200px;
-  height: auto;
-}
-
-.projet1 .descprojet1 {
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  column-gap: 90px;
+  row-gap: 40px;
   align-self: center;
 }
 
-.projet1 .descprojet1 h3 {
-  font-size: 1.7rem;
+.projectscontainer h3 {
+  font-size: 1.8rem;
+}
+
+.projectscontainer img {
+  width: 100%;
+  height: 240px;
+}
+
+.projet1:hover {
+  background-color: var(--white-transparent);
+  border: solid var(--white-transparent);
+  border-width: 50px;
+  background-clip: padding-box;
+  border-radius: 40px;
 }
 
 /* Version petite / mobile */
