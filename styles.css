@@ -14,7 +14,7 @@
 }
 
 :root {
-  --white-transparent: rgba(255, 255, 255, 0.1);
+  --white-transparent: rgba(255, 255, 255, 0.06);
   --white: #f4f4f4;
   --yellow: #edd11b;
   --blue: #94e7ec;
@@ -29,7 +29,7 @@ body {
 
 p {
   font-family: "Onest-medium";
-  font-size: 1.4rem;
+  font-size: 1.2rem;
 }
 
 /* Navbar et header */
@@ -49,7 +49,7 @@ header h1 {
   margin: 0;
   color: var(--yellow);
   font-family: "Onest-semi-bold";
-  font-size: 1.7rem;
+  font-size: 1.6rem;
 }
 
 header nav {
@@ -66,7 +66,7 @@ header nav a {
   color: var(--white);
   font-family: "Onest-medium";
   text-decoration: none;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .projetspecial {
@@ -135,6 +135,7 @@ header nav a {
 
 .apropos-container p {
   align-self: center;
+  color: var(--blue);
 }
 
 .apropos-container img {
@@ -183,17 +184,15 @@ header nav a {
   -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
 }
 
-/* 1 */
-
 .projet1 {
   display: grid;
   grid-template-columns: 1fr 2fr;
-  column-gap: 25px;
-  padding-top: 30px;
+  column-gap: 17px;
+  padding-top: 40px;
 }
 
 .projet1 img {
-  width: 300px;
+  width: 200px;
   height: auto;
 }
 
@@ -202,28 +201,6 @@ header nav a {
 }
 
 .projet1 .descprojet1 h3 {
-  font-size: 1.7rem;
-}
-
-/* 2 */
-
-.projet2 {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  column-gap: 25px;
-  padding-top: 60px;
-}
-
-.projet2 img {
-  width: 300px;
-  height: auto;
-}
-
-.projet2 .descprojet2 {
-  align-self: center;
-}
-
-.projet2 .descprojet2 h3 {
   font-size: 1.7rem;
 }
 
