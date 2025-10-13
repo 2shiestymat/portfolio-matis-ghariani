@@ -224,6 +224,8 @@ header nav a {
 .imagecentrale img {
   width: 1100px;
   height: 500px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .info {
