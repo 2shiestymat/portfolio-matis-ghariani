@@ -211,6 +211,52 @@ header nav a {
   border-radius: 40px;
 }
 
+/* Page Projet */
+
+.imagecentrale {
+  display: flex;
+  justify-content: center;
+  padding-top: 50px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.imagecentrale img {
+  width: 1100px;
+  height: 500px;
+}
+
+.info {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.info h2 {
+  color: var(--white);
+  font-size: 5rem;
+  color: transparent; /* Pas de couleur de remplissage */
+  -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
+  margin: 0; /* enlève la marge par défaut des <h*> */
+}
+
+.info h3 {
+  color: var(--white);
+  font-size: 1.8rem;
+  font-family: "Onest-medium";
+}
+
+.texte {
+  color: var(--white);
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+
 /* Version petite / mobile */
 
 @media screen and (max-width: 810px) {
