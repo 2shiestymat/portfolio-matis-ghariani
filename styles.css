@@ -23,8 +23,8 @@
 }
 
 body {
-  background-color: black;
   font-family: "Onest-semi-bold";
+  background: #121212;
 }
 
 p {
@@ -201,6 +201,8 @@ header nav a {
 .projectscontainer img {
   width: 100%;
   height: 240px;
+  object-fit: cover;
+  object-position: center;
 }
 
 .projet1:hover {
