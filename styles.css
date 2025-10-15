@@ -14,21 +14,17 @@
 }
 
 :root {
-  --white-transparent: rgba(255, 255, 255, 0.06);
   --white: #f4f4f4;
-  --yellow: #edd11b;
+  --white-before: #bebbbb;
   --blue: #94e7ec;
-  --white-hover: #dad9d9;
-  --blue-hover: #37b7bf;
 }
 
 body {
-  font-family: "Onest-semi-bold";
-  background: #121212;
+  font-family: "Onest-medium";
+  background: black;
 }
 
 p {
-  font-family: "Onest-medium";
   font-size: 1.2rem;
 }
 
@@ -37,74 +33,59 @@ p {
 header {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 20px 20px;
-  position: relative;
+  justify-content: space-between;
+  padding: 20px 50px;
 }
 
-header h1 {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+header p {
   margin: 0;
-  color: var(--yellow);
-  font-family: "Onest-semi-bold";
-  font-size: 1.6rem;
-}
-
-header nav {
-  display: flex;
-  gap: 42px;
-  background-color: var(--white-transparent);
-  border: solid var(--white-transparent);
-  background-clip: padding-box;
-  border-width: 15px 42px;
-  border-radius: 40px;
-}
-
-header nav a {
-  color: var(--white);
   font-family: "Onest-medium";
-  text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.3rem;
+  color: var(--blue);
 }
 
-.projetspecial {
-  color: var(--blue);
+.navbar {
+  display: flex;
+  gap: 270px;
+  font-family: "Onest-medium";
+}
+
+.navbar a {
+  text-decoration: none;
+  color: var(--white-before);
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  color: var(--white);
 }
 
 /* Acceuil */
 
 .hero {
-  padding-top: 130px;
+  position: relative;
+  height: 100vh;
+  width: auto;
 }
 
-.hero > div {
-  display: grid;
-  grid-template-columns: 3fr 1fr; /* 3/4 pour le nom, 1/4 pour le paragraphe */
-  align-items: center;
+.hero .portfolio {
+  position: absolute;
+  right: 40px; /* espace à droite */
+  font-size: 16rem; /* taille du texte */
   color: var(--white);
-  padding: 70px;
-  gap: 25px;
-  max-width: 1900px;
-  margin: 0 auto;
-}
-
-.nom-container {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.25;
-}
-
-.prenom {
-  font-size: 10rem;
-  font-weight: bold;
   margin: 0;
+  padding-top: 300px;
+  letter-spacing: 2px;
 }
 
-.nom {
-  font-size: 10rem;
-  font-weight: bold;
+.hero ._2025 {
+  position: absolute;
+  bottom: 30px; /* même hauteur visuelle que “Portfolio” */
+  right: 400px; /* décale vers la gauche du mot “Portfolio” */
+  font-size: 2rem; /* petit texte */
+  font-weight: 400;
+  color: white;
+  opacity: 0.7;
   margin: 0;
 }
 
@@ -124,7 +105,7 @@ header nav a {
   margin: 0;
   padding-bottom: 40px;
   color: transparent; /* Pas de couleur de remplissage */
-  -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
+  -webkit-text-stroke: 0.2px var(--white); /* Épaisseur + couleur du contour */
 }
 
 .apropos-container {
@@ -135,7 +116,8 @@ header nav a {
 
 .apropos-container p {
   align-self: center;
-  color: var(--blue);
+  color: var(--white);
+  line-height: 40px;
 }
 
 .apropos-container img {
@@ -187,7 +169,7 @@ header nav a {
 .projectscontainer {
   display: grid;
   align-items: center;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 500px 500px;
   grid-template-rows: 1fr 1fr;
   column-gap: 90px;
   row-gap: 40px;
@@ -196,6 +178,13 @@ header nav a {
 
 .projectscontainer h3 {
   font-size: 1.8rem;
+  font-family: "Onest-medium";
+  color: var(--white-before);
+}
+
+.projectscontainer p {
+  color: var(--white-before);
+  line-height: 30px;
 }
 
 .projectscontainer img {
@@ -205,12 +194,10 @@ header nav a {
   object-position: center;
 }
 
-.projet1:hover {
-  background-color: var(--white-transparent);
-  border: solid var(--white-transparent);
-  border-width: 50px;
-  background-clip: padding-box;
-  border-radius: 40px;
+/* Au survol du projet */
+.projectscontainer > div:hover h3,
+.projectscontainer > div:hover p {
+  color: var(--white);
 }
 
 /* Page Projet */
@@ -261,23 +248,22 @@ header nav a {
   padding-top: 20px;
 }
 
+@media screen and (max-width: 1110px) {
+  .navbar {
+    display: flex;
+    flex-direction: column; /* empile les liens verticalement */
+    align-items: flex-end; /* reste aligné à droite */
+    gap: 20px; /* espace vertical entre les liens */
+  }
+
+  .hero .portfolio {
+    font-size: 11rem;
+  }
+}
+
 /* Version petite / mobile */
 
 @media screen and (max-width: 810px) {
-  .hero > div {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding-top: 300px;
-  }
-
-  .prenom {
-    font-size: 8rem;
-  }
-
-  .nom {
-    font-size: 8rem;
-  }
-
   header {
     justify-content: space-between;
   }
@@ -289,6 +275,16 @@ header nav a {
 
   header nav {
     margin-right: 20px;
+  }
+
+  .hero > div {
+    grid-template-columns: 1fr;
+    height: auto;
+    padding-top: 300px;
+  }
+
+  .hero .portfolio {
+    font-size: 5rem;
   }
 
   .apropos h2 {
