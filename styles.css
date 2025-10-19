@@ -17,11 +17,12 @@
   --white: #f4f4f4;
   --white-before: #bebbbb;
   --blue: #94e7ec;
+  --gray: #202020;
 }
 
 body {
   font-family: "Onest-medium";
-  background: black;
+  background: var(--gray);
 }
 
 p {
@@ -70,8 +71,8 @@ header p {
 
 .hero .portfolio {
   position: absolute;
-  right: 40px; /* espace à droite */
-  font-size: 16rem; /* taille du texte */
+  right: 30px; /* espace à droite */
+  font-size: 17rem; /* taille du texte */
   color: var(--white);
   margin: 0;
   padding-top: 300px;
@@ -121,8 +122,10 @@ header p {
 }
 
 .apropos-container img {
-  width: 390px;
-  height: auto;
+  width: 380px;
+  height: 390px;
+  object-fit: cover;
+  object-position: center;
 }
 
 /* Competences */
