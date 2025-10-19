@@ -36,6 +36,9 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 header p {
@@ -47,7 +50,7 @@ header p {
 
 .navbar {
   display: flex;
-  gap: 270px;
+  gap: 250px;
   font-family: "Onest-medium";
 }
 
@@ -106,7 +109,7 @@ header p {
   margin: 0;
   padding-bottom: 40px;
   color: transparent; /* Pas de couleur de remplissage */
-  -webkit-text-stroke: 0.2px var(--white); /* Épaisseur + couleur du contour */
+  -webkit-text-stroke: 0.1px var(--white); /* Épaisseur + couleur du contour */
 }
 
 .apropos-container {
@@ -187,7 +190,7 @@ header p {
 
 .projectscontainer p {
   color: var(--white-before);
-  line-height: 30px;
+  line-height: 40px;
 }
 
 .projectscontainer img {
@@ -208,7 +211,7 @@ header p {
 .imagecentrale {
   display: flex;
   justify-content: center;
-  padding-top: 50px;
+  padding-top: 100px;
   max-width: 1100px;
   margin: 0 auto;
 }
@@ -249,7 +252,45 @@ header p {
   max-width: 1100px;
   margin: 0 auto;
   padding-top: 20px;
+  line-height: 40px;
 }
+
+.btnjouer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+
+.btnjouer button {
+  display: flex;
+  border: 2px solid var(--white-before); /* Bordure blanche (tu peux changer la couleur) */
+  color: var(--white-before); /* Couleur du texte */
+  background-color: transparent; /* Fond transparent */
+  border-radius: 60px; /* Coins arrondis */
+  font-family: "Onest-Medium";
+  font-size: 2rem;
+  padding: 10px 90px;
+}
+
+.btnjouer button:hover {
+  border: 2px solid var(--white); /* Bordure blanche (tu peux changer la couleur) */
+  color: var(--white); /* Couleur du texte */
+}
+
+.btnjouer button:visited,
+.btnjouer button:focus,
+.btnjouer button:active {
+  display: flex;
+  border: 2px solid var(--white-before); /* Bordure blanche (tu peux changer la couleur) */
+  color: var(--white-before); /* Couleur du texte */
+  background-color: transparent; /* Fond transparent */
+  border-radius: 50px; /* Coins arrondis */
+  font-family: "Onest-Medium";
+  font-size: 2rem;
+  padding: 10px 90px;
+}
+/* Version petite / mobile */
 
 @media screen and (max-width: 1110px) {
   .navbar {
@@ -261,49 +302,5 @@ header p {
 
   .hero .portfolio {
     font-size: 11rem;
-  }
-}
-
-/* Version petite / mobile */
-
-@media screen and (max-width: 810px) {
-  header {
-    justify-content: space-between;
-  }
-
-  header h1 {
-    position: static;
-    transform: none;
-  }
-
-  header nav {
-    margin-right: 20px;
-  }
-
-  .hero > div {
-    grid-template-columns: 1fr;
-    height: auto;
-    padding-top: 300px;
-  }
-
-  .hero .portfolio {
-    font-size: 5rem;
-  }
-
-  .apropos h2 {
-    justify-items: center;
-    text-align: center;
-    font-size: 5rem;
-  }
-
-  .apropos-container {
-    grid-template-columns: 1fr;
-    justify-items: center;
-    text-align: center;
-  }
-
-  .apropos-container img {
-    width: 60%;
-    height: auto;
   }
 }
