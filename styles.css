@@ -22,25 +22,11 @@
 
 body {
   font-family: "Onest-semi-bold";
-}
-
-body {
-  margin: 0;
-  background: linear-gradient(-45deg, #000, #111, #222, #444);
-  background-size: 400% 400%;
-  animation: gradient 15s ease infinite;
-}
-
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+  background-image: url("img/background.png");
+  height: 100vh;
+  background-size: cover; /* l'image est entièrement visible */
+  background-position: center; /* centre l'image */
+  background-repeat: no-repeat;
 }
 
 p {
@@ -55,7 +41,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 20px 30px;
+  padding: 40px 70px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -64,13 +50,15 @@ header {
 header p {
   margin: 0;
   font-family: "Onest-medium";
-  font-size: 1.3rem;
-  color: var(--blue);
+  font-size: 1.7rem;
+  color: var(--white);
 }
 
 .navbar {
   display: flex;
-  gap: 230px;
+  justify-content: flex-start;
+  width: 50%;
+  gap: 220px;
   font-family: "Onest-medium";
 }
 
@@ -89,28 +77,47 @@ header p {
 .hero {
   position: relative;
   height: 100vh;
-  width: auto;
+  display: flex;
+  justify-content: center; /* centre verticalement */
   margin: 0 auto;
 }
 
-.hero .portfolio {
+.elementacceuil {
   position: absolute;
-  right: 10px; /* espace à droite */
-  font-size: 15rem; /* taille du texte */
-  color: var(--white);
-  margin: 0;
-  padding-top: 300px;
-  bottom: 0;
+  top: 40%; /* milieu vertical */
+  left: 50%; /* milieu horizontal */
+  transform: translateY(-50%) translateX(0); /* aligne verticalement au centre sans décaler horizontalement */
+  text-align: left; /* texte aligné à gauche */
+  flex-direction: column;
 }
 
-.annee {
-  position: absolute;
-  bottom: 190px; /* même hauteur visuelle que “Portfolio” */
-  right: 1000px; /* décale vers la gauche du mot “Portfolio” */
-  font-size: 3rem; /* petit texte */
-  margin: 0;
-  color: var(--white-before);
+.hero h1 {
+  margin: 0; /* supprime les marges par défaut */
+  line-height: 1; /* réduit l’espace entre les lignes */
 }
+
+.prenom {
+  font-family: "Onest";
+  font-size: 8.5vw;
+  color: var(--white);
+}
+
+.nom {
+  font-family: "Onest";
+  font-size: 8.5vw;
+  color: var(--white);
+  padding-top: 1px;
+}
+
+.description {
+  font-family: "Onest-medium";
+  font-size: 2.3vw;
+  padding-top: 28px;
+  color: var(--white-before);
+  word-spacing: 5px;
+}
+
+/* Ce conteneur centre le "début" du texte au milieu de la page */
 
 /* À propos */
 
@@ -141,8 +148,7 @@ header p {
   font-size: 6rem;
   margin: 0;
   padding-bottom: 30px;
-  color: transparent; /* Pas de couleur de remplissage */
-  -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
+  color: var(--white);
 }
 
 /* Responsive pour mobile */
@@ -195,8 +201,7 @@ header p {
   font-size: 6rem;
   margin: 0;
   padding-bottom: 40px;
-  color: transparent; /* Pas de couleur de remplissage */
-  -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
+  color: var(--white);
 }
 
 .projectscontainer {
