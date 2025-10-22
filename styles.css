@@ -22,11 +22,7 @@
 
 body {
   font-family: "Onest-semi-bold";
-  background-image: url("img/background.png");
-  height: 100vh;
-  background-size: cover; /* l'image est entièrement visible */
-  background-position: center; /* centre l'image */
-  background-repeat: no-repeat;
+  background-color: #202020;
 }
 
 p {
@@ -41,7 +37,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 70px;
+  padding: 40px 150px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -56,7 +52,7 @@ header p {
 
 .navbar {
   display: flex;
-  justify-content: flex-start;
+  justify-content: space-between;
   width: 50%;
   gap: 220px;
   font-family: "Onest-medium";
@@ -75,49 +71,74 @@ header p {
 /* Acceuil */
 
 .hero {
+  display: flex;
   position: relative;
   height: 100vh;
-  display: flex;
-  justify-content: center; /* centre verticalement */
+  justify-content: start;
   margin: 0 auto;
 }
 
 .elementacceuil {
   position: absolute;
-  top: 40%; /* milieu vertical */
-  left: 50%; /* milieu horizontal */
+  top: 40%; 
+  left: 50%; 
   transform: translateY(-50%) translateX(0); /* aligne verticalement au centre sans décaler horizontalement */
   text-align: left; /* texte aligné à gauche */
   flex-direction: column;
 }
 
+.imgacceuil {
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  justify-content: start;
+  align-items: center;
+}
+
 .hero h1 {
-  margin: 0; /* supprime les marges par défaut */
-  line-height: 1; /* réduit l’espace entre les lignes */
+  margin: 0; 
+  line-height: 1; 
 }
 
 .prenom {
   font-family: "Onest";
-  font-size: 8.5vw;
+  font-size: 8.5rem;
   color: var(--white);
 }
 
 .nom {
   font-family: "Onest";
-  font-size: 8.5vw;
+  font-size: 8.5rem;
   color: var(--white);
   padding-top: 1px;
 }
 
 .description {
   font-family: "Onest-medium";
-  font-size: 2.3vw;
+  font-size: 2.3rem;
   padding-top: 28px;
   color: var(--white-before);
   word-spacing: 5px;
 }
 
-/* Ce conteneur centre le "début" du texte au milieu de la page */
+@media screen and (max-width: 1625px) {
+  .navbar {
+    display: flex;
+    flex-direction: column; /* empile les liens verticalement */
+    align-items: flex-end; /* reste aligné à droite */
+    gap: 20px; /* espace vertical entre les liens */
+  }
+
+  .elementacceuil {
+    position: absolute;
+    top: 40%; 
+    left: 0%;
+    margin-left: 150px;
+    transform: translateY(-50%) translateX(0); /* aligne verticalement au centre sans décaler horizontalement */
+    text-align: left; /* texte aligné à gauche */
+    flex-direction: column;
+  }
+}
 
 /* À propos */
 
@@ -148,7 +169,8 @@ header p {
   font-size: 6rem;
   margin: 0;
   padding-bottom: 30px;
-  color: var(--white);
+  color: var(--blue);
+  font-family: "Onest-medium";
 }
 
 /* Responsive pour mobile */
@@ -172,7 +194,7 @@ header p {
   justify-content: center;
   max-width: 1100px;
   margin: 0 auto;
-  padding-top: 190px;
+  padding-top: 220px;
 }
 
 .imagecompetences {
@@ -194,14 +216,14 @@ header p {
   color: var(--white);
   max-width: 1100px;
   margin: 0 auto;
-  padding-top: 190px;
+  padding-top: 220px;
 }
 
 .projets h2 {
   font-size: 6rem;
   margin: 0;
   padding-bottom: 40px;
-  color: var(--white);
+  color: var(--blue);
 }
 
 .projectscontainer {
@@ -209,7 +231,7 @@ header p {
   align-items: center;
   grid-template-columns: 500px 500px;
   grid-template-rows: 1fr 1fr;
-  column-gap: 90px;
+  column-gap: 80px;
   row-gap: 40px;
   align-self: center;
 }
@@ -226,7 +248,7 @@ header p {
 
 .projectscontainer img {
   width: 100%;
-  height: 240px;
+  height: 300px;
   object-fit: cover;
   object-position: center;
 }
@@ -242,9 +264,9 @@ header p {
 .imagecentrale {
   display: flex;
   justify-content: center;
-  padding-top: 100px;
   max-width: 1100px;
   margin: 0 auto;
+  padding-top: 50px;
 }
 
 .imagecentrale img {
@@ -261,14 +283,13 @@ header p {
   flex-direction: row;
   max-width: 1100px;
   margin: 0 auto;
-  padding-top: 50px;
+  padding-top: 120px;
 }
 
 .info h2 {
   color: var(--white);
   font-size: 5rem;
-  color: transparent; /* Pas de couleur de remplissage */
-  -webkit-text-stroke: 0.6px var(--white); /* Épaisseur + couleur du contour */
+  color: var(--white);
   margin: 0; /* enlève la marge par défaut des <h*> */
 }
 
@@ -322,15 +343,4 @@ header p {
 }
 /* Version petite / mobile */
 
-@media screen and (max-width: 1110px) {
-  .navbar {
-    display: flex;
-    flex-direction: column; /* empile les liens verticalement */
-    align-items: flex-end; /* reste aligné à droite */
-    gap: 20px; /* espace vertical entre les liens */
-  }
 
-  .hero .portfolio {
-    font-size: 11rem;
-  }
-}
