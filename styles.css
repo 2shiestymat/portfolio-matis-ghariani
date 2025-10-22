@@ -79,19 +79,30 @@ header p {
 }
 
 .elementacceuil {
-  position: absolute;
+  display: flex;
+  border:1px solid pink;
+ /* position: absolute;
   top: 40%; 
   left: 50%; 
-  transform: translateY(-50%) translateX(0); /* aligne verticalement au centre sans décaler horizontalement */
+  transform: translateY(-50%) translateX(0);*/ /* aligne verticalement au centre sans décaler horizontalement */
   text-align: left; /* texte aligné à gauche */
   flex-direction: column;
+  width: 50%;
+  order: 2;
+  justify-content: center;
 }
 
 .imgacceuil {
-  position: absolute;
+  display: flex;
+  border:1px solid blue;
+ /* position: absolute;
   top: 40%;
-  left: 30%;
+  left: 30%;*
   justify-content: start;
+  align-items: center;*/
+  width: 50%;
+  order: 1;
+  justify-content: center;
   align-items: center;
 }
 
@@ -121,24 +132,7 @@ header p {
   word-spacing: 5px;
 }
 
-@media screen and (max-width: 1625px) {
-  .navbar {
-    display: flex;
-    flex-direction: column; /* empile les liens verticalement */
-    align-items: flex-end; /* reste aligné à droite */
-    gap: 20px; /* espace vertical entre les liens */
-  }
 
-  .elementacceuil {
-    position: absolute;
-    top: 40%; 
-    left: 0%;
-    margin-left: 150px;
-    transform: translateY(-50%) translateX(0); /* aligne verticalement au centre sans décaler horizontalement */
-    text-align: left; /* texte aligné à gauche */
-    flex-direction: column;
-  }
-}
 
 /* À propos */
 
@@ -229,7 +223,7 @@ header p {
 .projectscontainer {
   display: grid;
   align-items: center;
-  grid-template-columns: 500px 500px;
+  grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   column-gap: 80px;
   row-gap: 40px;
@@ -341,6 +335,37 @@ header p {
   font-size: 2rem;
   padding: 10px 90px;
 }
-/* Version petite / mobile */
+
+@media screen and (max-width: 1625px) {
+  
+.hero {
+  display: block;
+}
+  .navbar {
+    display: flex;
+    flex-direction: column; /* empile les liens verticalement */
+    align-items: flex-end; /* reste aligné à droite */
+    gap: 20px; /* espace vertical entre les liens */
+  }
+
+  .elementacceuil {
+    order: 1;
+  }
+
+  .apropos {
+    max-width: 990px;
+  }
+
+  .projets {
+    max-width: 990px;
+  }
+
+  .hero {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+
+}
 
 
