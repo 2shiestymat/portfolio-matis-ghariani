@@ -76,15 +76,12 @@ header p {
   height: 100vh;
   justify-content: start;
   margin: 0 auto;
+  max-width: 1100px;
 }
 
 .elementacceuil {
   display: flex;
   border:1px solid pink;
- /* position: absolute;
-  top: 40%; 
-  left: 50%; 
-  transform: translateY(-50%) translateX(0);*/ /* aligne verticalement au centre sans décaler horizontalement */
   text-align: left; /* texte aligné à gauche */
   flex-direction: column;
   width: 50%;
@@ -95,11 +92,6 @@ header p {
 .imgacceuil {
   display: flex;
   border:1px solid blue;
- /* position: absolute;
-  top: 40%;
-  left: 30%;*
-  justify-content: start;
-  align-items: center;*/
   width: 50%;
   order: 1;
   justify-content: center;
@@ -121,7 +113,6 @@ header p {
   font-family: "Onest";
   font-size: 8.5rem;
   color: var(--white);
-  padding-top: 1px;
 }
 
 .description {
@@ -165,19 +156,6 @@ header p {
   padding-bottom: 30px;
   color: var(--blue);
   font-family: "Onest-medium";
-}
-
-/* Responsive pour mobile */
-@media screen and (max-width: 810px) {
-  .apropos {
-    grid-template-columns: 1fr; /* une seule colonne */
-    text-align: center;
-  }
-
-  .apropos img {
-    max-width: 400px;
-    margin: 0 auto 30px;
-  }
 }
 
 /* Competences */
@@ -336,36 +314,131 @@ header p {
   padding: 10px 90px;
 }
 
-@media screen and (max-width: 1625px) {
+/* --- Mobile --- */
+@media (max-width: 800px) {
+  /* Header */
+  header {
+    display: block;
+    align-items: flex-start;
+    padding: 20px 40px;
+    background-color: #202020;
+  }
   
-.hero {
-  display: block;
-}
   .navbar {
-    display: flex;
-    flex-direction: column; /* empile les liens verticalement */
-    align-items: flex-end; /* reste aligné à droite */
-    gap: 20px; /* espace vertical entre les liens */
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 15px;
+    width: 100%;
+  }
+
+  .navbar a {
+    font-size: 1rem;
+  }
+
+  /* Hero */
+  .hero {
+    flex-direction: column;
+    height: auto;
+    padding: 80px 30px;
+    max-width: 100%;
   }
 
   .elementacceuil {
     order: 1;
+    width: 100%;
   }
 
+  .imgacceuil {
+    order: 2;
+    width: 100%;
+  }
+
+  .prenom, .nom {
+    font-size: 6rem;
+  }
+
+  .description {
+    font-size: 1.6rem;
+    padding-top: 20px;
+  }
+
+  /* À propos */
   .apropos {
-    max-width: 990px;
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+    padding-top: 120px;
+    padding-inline: 30px;
   }
 
+  .apropos img {
+    width: 100%;
+  }
+
+  .apropos-container h2 {
+    font-size: 3.5rem;
+    text-align: center;
+  }
+
+  .apropos-container p {
+    text-align: center;
+  }
+
+  /* Compétences */
+  .competences {
+    padding-top: 150px;
+    padding-inline: 20px;
+  }
+
+  .imagecompetences {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    row-gap: 25px;
+  }
+
+  .imagecompetences img {
+    height: 50px;
+    width: 50px;
+  }
+
+  /* Projets */
   .projets {
-    max-width: 990px;
+    padding-top: 150px;
+    padding-inline: 30px;
   }
 
-  .hero {
-    max-width: 1100px;
-    margin: 0 auto;
+  .projets h2 {
+    font-size: 3.5rem;
+    text-align: center;
+    padding-bottom: 30px;
   }
 
+  .projectscontainer {
+    grid-template-columns: 1fr;
+    row-gap: 40px;
+  }
 
+  .projectscontainer h3 {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .projectscontainer p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+
+  .projectscontainer img {
+    height: 220px;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 26px;
+  }
+
+  h1, h2, h3 {
+    line-height: 1.2;
+  }
 }
 
 
