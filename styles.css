@@ -37,7 +37,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 40px 150px;
+  padding: 40px 100px;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -54,7 +54,6 @@ header p {
   display: flex;
   justify-content: space-between;
   width: 50%;
-  gap: 220px;
   font-family: "Onest-medium";
 }
 
@@ -81,7 +80,7 @@ header p {
 
 .elementacceuil {
   display: flex;
-  border:1px solid pink;
+  /*border: 1px solid pink;*/
   text-align: left; /* texte aligné à gauche */
   flex-direction: column;
   width: 50%;
@@ -91,7 +90,7 @@ header p {
 
 .imgacceuil {
   display: flex;
-  border:1px solid blue;
+  /*border: 1px solid pink;*/
   width: 50%;
   order: 1;
   justify-content: center;
@@ -99,31 +98,29 @@ header p {
 }
 
 .hero h1 {
-  margin: 0; 
-  line-height: 1; 
+  margin: 0;
+  line-height: 1;
 }
 
 .prenom {
   font-family: "Onest";
-  font-size: 8.5rem;
+  font-size: 7rem;
   color: var(--white);
 }
 
 .nom {
   font-family: "Onest";
-  font-size: 8.5rem;
+  font-size: 7rem;
   color: var(--white);
 }
 
 .description {
   font-family: "Onest-medium";
-  font-size: 2.3rem;
+  font-size: 1.8rem;
   padding-top: 28px;
   color: var(--white-before);
   word-spacing: 5px;
 }
-
-
 
 /* À propos */
 
@@ -141,6 +138,7 @@ header p {
   width: 100%;
   height: auto;
   object-fit: cover;
+  order: 2;
 }
 
 .apropos-container {
@@ -148,6 +146,7 @@ header p {
   flex-direction: column;
   justify-content: center;
   color: var(--white);
+  order: 1;
 }
 
 .apropos-container h2 {
@@ -314,16 +313,16 @@ header p {
   padding: 10px 90px;
 }
 
-/* --- Mobile --- */
-@media (max-width: 800px) {
+/* ------ Version Mobile ------ */
+
+@media (max-width: 900px) {
   /* Header */
+
   header {
     display: block;
-    align-items: flex-start;
     padding: 20px 40px;
-    background-color: #202020;
   }
-  
+
   .navbar {
     flex-direction: column;
     align-items: flex-end;
@@ -335,12 +334,13 @@ header p {
     font-size: 1rem;
   }
 
-  /* Hero */
+  /* Acceuil */
+
   .hero {
     flex-direction: column;
     height: auto;
-    padding: 80px 30px;
-    max-width: 100%;
+    padding-top: 300px;
+    padding-inline: 30px;
   }
 
   .elementacceuil {
@@ -353,25 +353,23 @@ header p {
     width: 100%;
   }
 
-  .prenom, .nom {
-    font-size: 6rem;
+  .prenom,
+  .nom {
+    font-size: 4.5rem;
   }
 
   .description {
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     padding-top: 20px;
   }
 
   /* À propos */
+
   .apropos {
     grid-template-columns: 1fr;
     row-gap: 40px;
-    padding-top: 120px;
+    padding-top: 250px;
     padding-inline: 30px;
-  }
-
-  .apropos img {
-    width: 100%;
   }
 
   .apropos-container h2 {
@@ -384,14 +382,14 @@ header p {
   }
 
   /* Compétences */
+
   .competences {
-    padding-top: 150px;
-    padding-inline: 20px;
+    padding: 100px 20px 0 20px;
   }
 
   .imagecompetences {
     grid-template-columns: repeat(3, 1fr);
-    column-gap: 20px;
+    column-gap: 25px;
     row-gap: 25px;
   }
 
@@ -401,6 +399,7 @@ header p {
   }
 
   /* Projets */
+
   .projets {
     padding-top: 150px;
     padding-inline: 30px;
@@ -409,36 +408,56 @@ header p {
   .projets h2 {
     font-size: 3.5rem;
     text-align: center;
-    padding-bottom: 30px;
   }
 
   .projectscontainer {
     grid-template-columns: 1fr;
-    row-gap: 40px;
   }
 
   .projectscontainer h3 {
     font-size: 1.5rem;
-    text-align: center;
-  }
-
-  .projectscontainer p {
-    font-size: 1.1rem;
-    text-align: center;
   }
 
   .projectscontainer img {
     height: 220px;
   }
 
+  /* Page Projets */
+
+  .info {
+    align-items: flex-start;
+    flex-direction: column;
+    padding-top: 150px;
+    padding-inline: 30px;
+  }
+
+  .info h2 {
+    font-size: 3rem;
+  }
+
+  .info h3 {
+    font-size: 1.2rem;
+  }
+
+  .imagecentrale {
+    padding-inline: 30px;
+  }
+
+  .imagecentrale img {
+    width: 100%;
+    height: auto;
+  }
+
+  .texte {
+    padding-inline: 30px;
+  }
+
+  .btnjouer button {
+    font-size: 1.2rem;
+    padding: 10px 90px;
+  }
+
   p {
     font-size: 1rem;
-    line-height: 26px;
-  }
-
-  h1, h2, h3 {
-    line-height: 1.2;
   }
 }
-
-
