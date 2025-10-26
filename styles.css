@@ -13,6 +13,26 @@
   src: url("./font/Onest-Medium.ttf") format("truetype");
 }
 
+@font-face {
+  font-family: "Geist-Bold";
+  src: url("font/Geist-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist-Light";
+  src: url("font/Geist-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist-Medium";
+  src: url("font/Geist-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Geist-Regular";
+  src: url("font/Geist-Regular.ttf") format("truetype");
+}
+
 :root {
   --white: #f4f4f4;
   --white-before: #bebbbb;
@@ -21,13 +41,13 @@
 }
 
 body {
-  font-family: "Onest-semi-bold";
-  background-color: #202020;
+  background-color: black;
+  font-family: "Geist-Regular";
 }
 
 p {
   font-size: 1.2rem;
-  font-family: "Onest-medium";
+  font-family: "Geist-Light";
   line-height: 30px;
 }
 
@@ -45,7 +65,7 @@ header {
 
 header p {
   margin: 0;
-  font-family: "Onest-medium";
+  font-family: "Geist-Light";
   font-size: 1.7rem;
   color: var(--white);
 }
@@ -54,7 +74,7 @@ header p {
   display: flex;
   justify-content: space-between;
   width: 50%;
-  font-family: "Onest-medium";
+  font-family: "Geist-Light";
 }
 
 .navbar a {
@@ -69,7 +89,7 @@ header p {
 
 /* Acceuil */
 
-.hero {
+.acceuil {
   display: flex;
   position: relative;
   height: 100vh;
@@ -97,29 +117,27 @@ header p {
   align-items: center;
 }
 
-.hero h1 {
+.acceuil h1 {
   margin: 0;
   line-height: 1;
 }
 
 .prenom {
-  font-family: "Onest";
   font-size: 7rem;
   color: var(--white);
 }
 
 .nom {
-  font-family: "Onest";
   font-size: 7rem;
   color: var(--white);
 }
 
 .description {
-  font-family: "Onest-medium";
   font-size: 1.8rem;
   padding-top: 28px;
   color: var(--white-before);
   word-spacing: 5px;
+  font-family: "Geist-Light";
 }
 
 /* À propos */
@@ -153,8 +171,7 @@ header p {
   font-size: 6rem;
   margin: 0;
   padding-bottom: 30px;
-  color: var(--blue);
-  font-family: "Onest-medium";
+  color: var(--white);
 }
 
 /* Competences */
@@ -194,7 +211,7 @@ header p {
   font-size: 6rem;
   margin: 0;
   padding-bottom: 40px;
-  color: var(--blue);
+  color: var(--white);
 }
 
 .projectscontainer {
@@ -209,7 +226,6 @@ header p {
 
 .projectscontainer h3 {
   font-size: 1.8rem;
-  font-family: "Onest-medium";
   color: var(--white-before);
 }
 
@@ -267,7 +283,7 @@ header p {
 .info h3 {
   color: var(--white);
   font-size: 1.8rem;
-  font-family: "Onest-medium";
+  font-family: "Geist-Light";
 }
 
 .texte {
@@ -290,7 +306,6 @@ header p {
   color: var(--white-before); /* Couleur du texte */
   background-color: transparent; /* Fond transparent */
   border-radius: 60px; /* Coins arrondis */
-  font-family: "Onest-Medium";
   font-size: 2rem;
   padding: 10px 90px;
 }
@@ -308,7 +323,6 @@ header p {
   color: var(--white-before); /* Couleur du texte */
   background-color: transparent; /* Fond transparent */
   border-radius: 50px; /* Coins arrondis */
-  font-family: "Onest-Medium";
   font-size: 2rem;
   padding: 10px 90px;
 }
@@ -336,7 +350,7 @@ header p {
 
   /* Acceuil */
 
-  .hero {
+  .acceuil {
     flex-direction: column;
     height: auto;
     padding-top: 300px;
