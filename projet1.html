@@ -10,9 +10,9 @@
     <header>
       <p>Portfolio</p>
       <nav class="navbar">
-        <a href="">Accueil</a>
-        <a href="">À propos</a>
-        <a href="">Projets</a>
+        <a href="index.html">Accueil</a>
+        <a href="index.html#apropos">À propos</a>
+        <a href="index.html#projets">Projets</a>
       </nav>
     </header>
     <div id="app">
@@ -29,8 +29,6 @@
         <p>{{ projet.paraun }}</p>
         <p>{{ projet.paradeux }}</p>
       </div>
-      <script src="https://unpkg.com/vue@3"></script>
-      <script src="script.js"></script>
     </div>
 
     <section id="btnjouer" class="btnjouer">
@@ -40,5 +38,28 @@
         Jouer
       </button>
     </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logos">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Email">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="">
+          </a>
+          <a href="https://www.twitter.com" target="_blank" aria-label="LinkedIn">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg" alt="">
+          </a>
+          <a href="https://www.instagram.com" target="_blank" aria-label="Github">
+            <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="">
+          </a>
+        </div>
+        <p>&copy; 2025 - Matis Ghariani</p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/vue@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>

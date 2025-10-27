@@ -5,13 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio de Matis</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
       <p>Portfolio</p>
       <nav class="navbar">
-        <a href="#acceuil">Accueil</a>
+        <a href="index.html">Accueil</a>
         <a href="#apropos">À propos</a>
         <a href="#projets">Projets</a>
       </nav>
@@ -62,32 +61,69 @@
 
     <section id="projets" class="projets">
       <h2>Projets</h2>
+      <div id="app">
+        <div class="projectscontainer">
+          <a class="projet1" href="projet1.html?id=1" v-for="projet in projects" :key="projet.id">
+            <h3>{{ projet.title }}</h3>
+            <img :src="projet.imageacceuil" alt="" />
+          </a>
 
-      <div class="projectscontainer">
-        <div id="pro1" class="projet1">
-          <h3>Sumo Core</h3>
-          <img src="img/cover_sc.png" alt="" />
-        </div>
+          <a class="projet1" href="projet1.html?id=2" v-for="projet in projects" :key="projet.id">
+            <h3>{{ projet.title }}</h3>
+            <img :src="projet.imageacceuil" alt="" />
+          </a>
 
-        <div id="pro2" class="projet1">
-          <h3>La Pomme</h3>
-          <img src="img/Screenshot 2025-10-19 020534.png" alt="" />
-        </div>
+          <a class="projet1" href="projet1.html?id=3" v-for="projet in projects" :key="projet.id">
+            <h3>{{ projet.title }}</h3>
+            <img :src="projet.imageacceuil" alt="" />
+          </a>
 
-        <div id="pro3" class="projet1">
-          <h3>Micromontage</h3>
-          <img src="img/1496854-blue-Waveform-2K.jpg" alt="" />
-        </div>
-
-        <div id="pro4" class="projet1">
-          <h3>En Mer</h3>
-          <img src="img/export-1.jpg" alt="" />
+          <a class="projet1" href="projet1.html?id=4" v-for="projet in projects" :key="projet.id">
+            <h3>{{ projet.title }}</h3>
+            <img :src="projet.imageacceuil" alt="" />
+          </a>
         </div>
       </div>
     </section>
+
+    <footer>
+      <div class="footer-content">
+        <div class="footer-logos">
+          <a href="https://www.facebook.com" target="_blank" aria-label="Email">
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://www.twitter.com"
+            target="_blank"
+            aria-label="LinkedIn"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"
+              alt=""
+            />
+          </a>
+          <a
+            href="https://www.instagram.com"
+            target="_blank"
+            aria-label="Github"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
+              alt=""
+            />
+          </a>
+        </div>
+        <p>&copy; 2025 - Matis Ghariani</p>
+      </div>
+    </footer>
+    <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
