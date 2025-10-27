@@ -42,17 +42,10 @@
       </p>
     </section>
 
-    <section id="btnjouer" class="btnjouer">
-      <button onclick="window.location.href=''">Ouvrir la galerie</button>
-    </section>
-
-    <div id="galerie" class="galerie-overlay">
-      <span id="fermerGalerie" class="fermer-btn">&times;</span>
-      <div class="galerie-contenu">
-        <img src="image1.jpg" alt="Image 1" />
-        <img src="image2.jpg" alt="Image 2" />
-        <img src="image3.jpg" alt="Image 3" />
-      </div>
+    <div id="app">
+      <photo-gallery :images="photos"></photo-gallery>
+      <script src="https://unpkg.com/vue@3"></script>
+      <script src="script.js"></script>
     </div>
   </body>
 </html>
