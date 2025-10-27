@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio de Matis</title>
     <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
   </head>
   <body>
     <header>
@@ -16,29 +15,23 @@
         <a href="">Projets</a>
       </nav>
     </header>
+    <div id="app">
+      <div class="info" v-for="projet in projects" :key="projet.id">
+        <h2>{{ projet.title }}</h2>
+        <h3>{{ projet.category }}</h3>
+      </div>
 
-    <section id="info" class="info">
-      <h2>Sumo Core</h2>
-      <h3>Jeu vidéo</h3>
-    </section>
+      <div class="imagecentrale" v-for="projet in projects" :key="projet.id">
+        <img :src="projet.image" />
+      </div>
 
-    <section id="imagecentrale" class="imagecentrale">
-      <img src="img/Desktop - 1.png" alt="" />
-    </section>
-
-    <section id="texte" class="texte">
-      <p>
-        "Sumo Core" est un jeu d'action solo de style arcade développé sur
-        phaser 5. Inspiré de la culture japonaise, le jeu met en scène des
-        sumos.
-      </p>
-      <p>
-        Dans ce projet, j’ai fait la conception, le développement et design du
-        jeux à l’aide de Visual Studio Code (Phaser 5), Tiled et Figma. Dans ce
-        projet, j’ai fait la conception, le développement et design du jeux à
-        l’aide de Visual Studio Code (Phaser 5), Tiled et Figma.
-      </p>
-    </section>
+      <div class="texte" v-for="projet in projects" :key="projet.id">
+        <p>{{ projet.paraun }}</p>
+        <p>{{ projet.paradeux }}</p>
+      </div>
+      <script src="https://unpkg.com/vue@3"></script>
+      <script src="script.js"></script>
+    </div>
 
     <section id="btnjouer" class="btnjouer">
       <button

@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Sumo Core",
+    "category": "Jeu vidéo",
+    "image": ["./img/Desktop - 1.png"],
+    "paraun": "Sumo Core est un jeu d'action solo de style arcade développé sur phaser 5. Inspiré de la culture japonaise, le jeu met en scène des sumos.",
+    "paradeux": "Dans ce projet, j’ai fait la conception, le développement et design du jeux à l’aide de Visual Studio Code (Phaser 5), Tiled et Figma. Dans ce projet, j’ai fait la conception, le développement et design du jeux à l’aide de Visual Studio Code (Phaser 5), Tiled et Figma.",
+    "lien": "https://jahmfrfr.itch.io/sumocore"
+  },
+  {
+    "id": 2,
+    "title": "Titre du projettt 2",
+    "category": "video"
+  }
+]
