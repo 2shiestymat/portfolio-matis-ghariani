@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "imageacceuil": ["./img/cover_sc.png"],
     "title": "Sumo Core",
     "category": "Jeu vidéo",
@@ -11,7 +11,7 @@
     "lien": "https://jahmfrfr.itch.io/sumocore"
   },
   {
-    "id": 2,
+    "id": "2",
     "imageacceuil": ["./img/Screenshot 2025-10-19 020534.png"],
     "title": "La Pomme",
     "category": "Montage vidéo / Animation 2D",
@@ -22,7 +22,7 @@
     "lien": "https://jahmfrfr.itch.io/sumocore"
   },
   {
-    "id": 3,
+    "id": "3",
     "imageacceuil": ["./img/1496854-blue-Waveform-2K.jpg"],
     "title": "Micromontage",
     "category": "Son",
@@ -33,7 +33,7 @@
     "lien": "https://jahmfrfr.itch.io/sumocore"
   },
   {
-    "id": 4,
+    "id": "4",
     "imageacceuil": ["./img/export-1.jpg"],
     "title": "En Mer",
     "category": "Modélisation 3d",

@@ -307,7 +307,11 @@ header p {
   padding-top: 50px;
 }
 
-.btnjouer button {
+.ajouer {
+  text-decoration: none;
+}
+
+.btnjouer button, .ajouer {
   display: flex;
   border: 2px solid var(--white-before); /* Bordure blanche (tu peux changer la couleur) */
   color: var(--white-before); /* Couleur du texte */
@@ -317,7 +321,7 @@ header p {
   padding: 10px 90px;
 }
 
-.btnjouer button:hover {
+.btnjouer button:hover, .ajouer:hover {
   border: 2px solid var(--white); /* Bordure blanche (tu peux changer la couleur) */
   color: var(--white); /* Couleur du texte */
 }

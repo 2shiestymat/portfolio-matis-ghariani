@@ -1,4 +1,5 @@
 const app = Vue.createApp({
+  
   data() {
     return {
       projects: [],
@@ -8,16 +9,32 @@ const app = Vue.createApp({
         { src: "img/export-3.jpg" },
         { src: "img/export-4.jpg" },
       ],
+      selectedProject: null,
     };
   },
   mounted() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get("id");
+
     fetch("projects.json")
       .then((data) => data.json())
-      .then((result) => (this.projects = result));
+      .then((result) => {
+        this.projects = result
+        if (projectId) {
+          const found = this.projects.find(p => p.id === projectId);
+          if (found) {
+            this.selectedProject = found;
+            console.log("✅ Projet trouvé :", found);
+          } else {
+            console.warn("❌ Aucun projet trouvé pour l'id :", projectId);
+          }
+        }
+        
+    });
   },
-  methods: {
 
-  }
+  
+  methods: {}
 });
 
 app.component("photo-gallery", {
