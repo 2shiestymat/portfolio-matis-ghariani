@@ -63,22 +63,12 @@
       <h2>Projets</h2>
       <div id="app">
         <div class="projectscontainer">
-          <a class="projet1" href="projet1.html?id=1" v-for="projet in projects" :key="projet.id">
-            <h3>{{ projet.title }}</h3>
-            <img :src="projet.imageacceuil" alt="" />
-          </a>
-
-          <a class="projet1" href="projet1.html?id=2" v-for="projet in projects" :key="projet.id">
-            <h3>{{ projet.title }}</h3>
-            <img :src="projet.imageacceuil" alt="" />
-          </a>
-
-          <a class="projet1" href="projet1.html?id=3" v-for="projet in projects" :key="projet.id">
-            <h3>{{ projet.title }}</h3>
-            <img :src="projet.imageacceuil" alt="" />
-          </a>
-
-          <a class="projet1" href="projet1.html?id=4" v-for="projet in projects" :key="projet.id">
+          <a
+            v-for="projet in projects"
+            :key="projet.id"
+            class="projet1"
+            :href="'projet.html?id=' + projet.id"
+          >
             <h3>{{ projet.title }}</h3>
             <img :src="projet.imageacceuil" alt="" />
           </a>
