@@ -17,6 +17,7 @@
     </header>
     <div id="app">
       <div v-for="projet in projects" :key="projet.id">
+        <div> <!-- sur ce div, tu va faire une vérification si le id du projet courant de la boucle == ce que tu aura récupéré en paramètre d'url -->
         <div class="info">
           <h2>{{ projet.title }}</h2>
           <h3>{{ projet.category }}</h3>
@@ -35,6 +36,8 @@
           <button>{{ projet.textbouton }}</button>
         </div>
       </div>
+      
+    </div>
     </div>
 
     <footer>

@@ -15,6 +15,9 @@ const app = Vue.createApp({
       .then((data) => data.json())
       .then((result) => (this.projects = result));
   },
+  methods: {
+
+  }
 });
 
 app.component("photo-gallery", {
