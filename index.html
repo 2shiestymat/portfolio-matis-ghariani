@@ -63,12 +63,14 @@
       <h2>Projets</h2>
       <div id="app">
         <div class="projectscontainer">
+          <!-- permet d'afficher une liste d'elements provenant d'un tableau de donnes (projects) -->
           <a
             v-for="projet in projects"
             :key="projet.id"
             class="projet1"
             :href="'projet1.html?id=' + projet.id"
           >
+            <!-- href amene au lien de la page du projet correspondant -->
             <h3>{{ projet.title }}</h3>
             <img :src="projet.imageacceuil" alt="" />
           </a>
@@ -79,31 +81,14 @@
     <footer>
       <div class="footer-content">
         <div class="footer-logos">
-          <a href="https://www.facebook.com" target="_blank" aria-label="Email">
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-              alt=""
-            />
+          <a href="">
+            <img src="./img/icons8-email-100.png" alt="" />
           </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"
-              alt=""
-            />
+          <a href="">
+            <img src="./img/icons8-linkedin.svg" alt="" />
           </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            aria-label="Github"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-              alt=""
-            />
+          <a href="">
+            <img src="./img/icons8-github.svg" alt="" />
           </a>
         </div>
         <p>&copy; 2025 - Matis Ghariani</p>

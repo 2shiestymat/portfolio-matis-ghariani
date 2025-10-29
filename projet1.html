@@ -17,9 +17,11 @@
     </header>
     <div id="app">
       <div>
-        <div v-if="selectedProject"><!-- sur ce div, tu va faire une vérification si le id du projet courant de la boucle == ce que tu aura récupéré en paramètre d'url -->
+        <div v-if="selectedProject">
+          <!-- sur ce div, tu va faire une vérification si le id du projet courant de la boucle == ce que tu aura récupéré en paramètre d'url -->
+          <!-- v-if selectedProject permet d'afficher les donnes du projet qui a le id correspondant au parametre url (seulement si ce projet existe) -->
           <div class="info">
-            <h2 >{{ selectedProject.title }}</h2>
+            <h2>{{ selectedProject.title }}</h2>
             <h3>{{ selectedProject.category }}</h3>
           </div>
 
@@ -33,10 +35,20 @@
           </div>
 
           <div class="btnjouer">
-            <a :href="selectedProject.lien"  v-if="selectedProject.id != 4" class="ajouer">{{ selectedProject.textbouton }}</a>
+            <a
+              :href="selectedProject.lien"
+              v-if="selectedProject.id != 4"
+              class="ajouer"
+              >{{ selectedProject.textbouton }}</a
+            >
           </div>
+          <!-- v-if permet de ne pas afficher ce bouton sur le projet qui a le id egale a 4 -->
 
-          <photo-gallery v-if="selectedProject.id == 4" :images="photos"></photo-gallery>
+          <photo-gallery
+            v-if="selectedProject.id == 4"
+            :images="photos"
+          ></photo-gallery>
+          <!-- v-if permet d'afficher la photo-gallery seulement si le id du projet est egale a 4 -->
         </div>
       </div>
     </div>
@@ -44,36 +56,20 @@
     <footer>
       <div class="footer-content">
         <div class="footer-logos">
-          <a href="https://www.facebook.com" target="_blank" aria-label="Email">
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg"
-              alt=""
-            />
+          <a href="">
+            <img src="./img/icons8-email-100.png" alt="" />
           </a>
-          <a
-            href="https://www.twitter.com"
-            target="_blank"
-            aria-label="LinkedIn"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/x.svg"
-              alt=""
-            />
+          <a href="">
+            <img src="./img/icons8-linkedin.svg" alt="" />
           </a>
-          <a
-            href="https://www.instagram.com"
-            target="_blank"
-            aria-label="Github"
-          >
-            <img
-              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg"
-              alt=""
-            />
+          <a href="">
+            <img src="./img/icons8-github.svg" alt="" />
           </a>
         </div>
         <p>&copy; 2025 - Matis Ghariani</p>
       </div>
     </footer>
+
     <script src="https://unpkg.com/vue@3"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollToPlugin.min.js"></script>

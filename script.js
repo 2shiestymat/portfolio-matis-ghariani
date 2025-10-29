@@ -1,7 +1,7 @@
 const app = Vue.createApp({
-  
   data() {
     return {
+      // contient la liste complete de fichier json
       projects: [],
       photos: [
         { src: "img/export-1.jpg" },
@@ -9,63 +9,74 @@ const app = Vue.createApp({
         { src: "img/export-3.jpg" },
         { src: "img/export-4.jpg" },
       ],
+      // ici quon stock les donne du projet de l'id coresspondant a l'url
       selectedProject: null,
     };
   },
   mounted() {
+    // recupere les parametres de l'url
     const urlParams = new URLSearchParams(window.location.search);
+    // extraire la valeur du parametre id de l'url
     const projectId = urlParams.get("id");
 
+    // charger la liste des projets depuis fichier json
     fetch("projects.json")
-      .then((data) => data.json())
+      .then((data) => data.json()) // Convertir les données au format désiré
       .then((result) => {
-        this.projects = result
+        this.projects = result; // stock le tout dans projects
         if (projectId) {
-          const found = this.projects.find(p => p.id === projectId);
+          // trouver le projet correspondant a l'id de l'url
+          const found = this.projects.find((p) => p.id === projectId);
           if (found) {
+            // si projet correspondant trouver, place les donnes dans selectedProject
             this.selectedProject = found;
-            console.log("✅ Projet trouvé :", found);
+            console.log("Projet trouvé :", found);
           } else {
-            console.warn("❌ Aucun projet trouvé pour l'id :", projectId);
+            console.warn("Aucun projet trouvé pour l'id :", projectId);
           }
         }
-        
-    });
+      });
   },
-
-  
-  methods: {}
 });
 
 app.component("photo-gallery", {
+  // reçoit le tableau
   props: ["images"],
   data() {
     return {
+      // Galerie est cachée au départ
       showGallery: false,
+      // index de l'image actuellement afficher (donc invisible)
       currentIndex: 0,
     };
   },
   computed: {
     currentImage() {
+      // retourne l'image actuellement afficher et utilise les images reçues
       return this.images[this.currentIndex];
     },
   },
   methods: {
+    // Ouvre la galerie
     openGallery(index = 0) {
-      this.currentIndex = index;
+      this.currentIndex = index; // Ouvre l'index
       this.showGallery = true;
     },
+    // ferme la galerie
     closeGallery() {
       this.showGallery = false;
     },
+    // passse a l'image suivante
     nextImage() {
       this.currentIndex = (this.currentIndex + 1) % this.images.length;
     },
+    // passse a l'image precedente
     prevImage() {
       this.currentIndex =
         (this.currentIndex - 1 + this.images.length) % this.images.length;
     },
   },
+  // Partie visuelle de la composante vu (se qui s'affiche dans html)
   template: `
     <div>
       <!-- Bouton d'ouverture -->
@@ -107,7 +118,7 @@ function getSamePageAnchor(link) {
   return link.hash;
 }
 
-// Scroll to a given hash, preventing the event given if there is one
+// Fonction pour faire defiler la page jusqua un element correspondant à un # (hash)
 function scrollToHash(hash, e) {
   const elem = hash ? document.querySelector(hash) : false;
   if (elem) {
@@ -116,17 +127,17 @@ function scrollToHash(hash, e) {
   }
 }
 
-// If a link's href is within the current page, scroll to it instead
+// Si un lien href est dans la page courante, scroll la a la palce
 document.querySelectorAll("a[href]").forEach((a) => {
   a.addEventListener("click", (e) => {
     scrollToHash(getSamePageAnchor(a), e);
   });
 });
 
-// Scroll to the element in the URL's hash on load
+// scroll jusqua l'element qui a un hash
 scrollToHash(window.location.hash);
 
-// Animation du header principal nom et portfolio
+// Animation de mon nom et prenom
 const titre = document.querySelector(".elementacceuil");
 gsap.timeline({ defaults: { duration: 1, ease: "power3.out" } }).from(titre, {
   opacity: 0,
