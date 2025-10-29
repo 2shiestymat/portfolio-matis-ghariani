@@ -6,8 +6,6 @@ prompts : Comment faire une galerie de photo interactive sur un site web a laide
 
 prompts : Doit me permettre de changer d'image
 
-prompts : Doit me permettre de changer d'image
-
 2. Fetch API
 
 
