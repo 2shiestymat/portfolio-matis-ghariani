@@ -138,8 +138,9 @@ document.querySelectorAll("a[href]").forEach((a) => {
 scrollToHash(window.location.hash);
 
 // Animation de mon nom et prenom
+// dure 1 seconde
 const titre = document.querySelector(".elementacceuil");
 gsap.timeline({ defaults: { duration: 1, ease: "power3.out" } }).from(titre, {
-  opacity: 0,
+  opacity: 0, // // Commence invisible
   scale: 0.8, // nom apparaît avec un effet scale
 });
