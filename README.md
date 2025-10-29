@@ -4,6 +4,4 @@ Lien vers le mon fichier figma (moodboard): https://www.figma.com/design/eQfrINE
 
 Lien vers mon tableau trello: https://trello.com/invite/b/68c5e6401f36cbb8da11c7aa/ATTIdf85923860a570ce41e93ae51ff2aeff80E06DCA/portfolio
 
-Choix du type de navigation: Carrousel
-
 Choix de composante Vue.js: Galerie interactive
