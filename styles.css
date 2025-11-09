@@ -143,6 +143,14 @@ header p {
   font-family: "Geist-Light";
 }
 
+.description span {
+  transition: color 0.3s ease;
+}
+
+.description span:hover {
+  color: var(--blue);
+}
+
 /* À propos */
 
 .apropos {

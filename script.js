@@ -137,10 +137,43 @@ document.querySelectorAll("a[href]").forEach((a) => {
 // scroll jusqua l'element qui a un hash
 scrollToHash(window.location.hash);
 
-// Animation de mon nom et prenom
-// dure 1 seconde
-const titre = document.querySelector(".elementacceuil");
-gsap.timeline({ defaults: { duration: 1, ease: "power3.out" } }).from(titre, {
-  opacity: 0, // // Commence invisible
-  scale: 0.8, // nom apparaît avec un effet scale
+gsap.from(".elementacceuil", {
+  scrollTrigger: ".elementacceuil",
+  y: 70,
+  opacity: 0,
+  duration: 1.7,
+  ease: "power3.out",
+});
+
+gsap.from(".apropos img", {
+  scrollTrigger: ".apropos img",
+  scale: 0.95,
+  opacity: 0,
+  rotate: 15,
+  duration: 1.4,
+  ease: "back.out(1.7)",
+});
+
+gsap.from(".apropos-container", {
+  scrollTrigger: ".apropos-container",
+  x: -70,
+  opacity: 0,
+  duration: 1.7,
+  ease: "power3.out",
+});
+
+gsap.from(".projectscontainer", {
+  scrollTrigger: ".projectscontainer",
+  y: 70,
+  opacity: 0,
+  duration: 1.7,
+  ease: "power3.out",
+});
+
+gsap.from(".projets h2", {
+  scrollTrigger: ".projets h2",
+  y: 70,
+  opacity: 0,
+  duration: 2,
+  ease: "power3.out",
 });
