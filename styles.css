@@ -208,6 +208,8 @@ header p {
 .imagecompetences img {
   height: 65px;
   width: 65px;
+  opacity: 0; /* invisible au départ */
+  transform: translateX(-50px); /* décalage à gauche */
 }
 
 /* Projets */

@@ -177,3 +177,12 @@ gsap.from(".projets h2", {
   duration: 2,
   ease: "power3.out",
 });
+
+gsap.to(".imagecompetences img", {
+  scrollTrigger: ".imagecompetences img",
+  opacity: 1,
+  x: 0, // revient à sa position originale
+  duration: 0.5,
+  stagger: 0.2, // chaque image apparaît 0.3s après la précédente
+  ease: "power2.out",
+});
