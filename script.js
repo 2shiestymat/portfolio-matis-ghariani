@@ -9,6 +9,11 @@ const app = Vue.createApp({
         { src: "img/export-3.jpg" },
         { src: "img/export-4.jpg" },
       ],
+      photos2: [
+        { src: "img/premierportfolio_acceuil.png" },
+        { src: "img/premierportfolio_projets.png" },
+        { src: "img/premierportfolio_contacts.png" },
+      ],
       // ici quon stock les donne du projet de l'id coresspondant a l'url
       selectedProject: null,
     };
@@ -74,6 +79,68 @@ app.component("photo-gallery", {
     prevImage() {
       this.currentIndex =
         (this.currentIndex - 1 + this.images.length) % this.images.length;
+    },
+  },
+  // Partie visuelle de la composante vu (se qui s'affiche dans html)
+  template: `
+    <div>
+      <!-- Bouton d'ouverture -->
+      <div class="btnjouer">
+        <button @click="openGallery()">Ouvrir la galerie</button>
+      </div>
+
+      <!-- Galerie plein écran -->
+      <div v-if="showGallery" class="fullscreen-gallery">
+        <span class="close" @click="closeGallery">&times;</span>
+
+        <!-- Flèches de navigation -->
+        <span class="prev" @click="prevImage">&#10094;</span>
+        <span class="next" @click="nextImage">&#10095;</span>
+
+        <!-- Image affichée -->
+        <img :src="currentImage.src" class="fullscreen-image">
+      </div>
+    </div>
+  `,
+});
+
+// Gallery 2 ------------------------------ //
+
+app.component("photo-gallery2", {
+  // reçoit le tableau
+  props: ["images2"],
+  data() {
+    return {
+      // Galerie est cachée au départ
+      showGallery: false,
+      // index de l'image actuellement afficher (donc invisible)
+      currentIndex: 0,
+    };
+  },
+  computed: {
+    currentImage() {
+      // retourne l'image actuellement afficher et utilise les images reçues
+      return this.images2[this.currentIndex];
+    },
+  },
+  methods: {
+    // Ouvre la galerie
+    openGallery(index = 0) {
+      this.currentIndex = index; // Ouvre l'index
+      this.showGallery = true;
+    },
+    // ferme la galerie
+    closeGallery() {
+      this.showGallery = false;
+    },
+    // passse a l'image suivante
+    nextImage() {
+      this.currentIndex = (this.currentIndex + 1) % this.images2.length;
+    },
+    // passse a l'image precedente
+    prevImage() {
+      this.currentIndex =
+        (this.currentIndex - 1 + this.images2.length) % this.images2.length;
     },
   },
   // Partie visuelle de la composante vu (se qui s'affiche dans html)

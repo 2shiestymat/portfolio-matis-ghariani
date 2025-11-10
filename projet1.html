@@ -37,7 +37,7 @@
           <div class="btnjouer">
             <a
               :href="selectedProject.lien"
-              v-if="selectedProject.id != 4"
+              v-if="selectedProject.id != 4 && selectedProject.id != 5"
               class="ajouer"
               >{{ selectedProject.textbouton }}</a
             >
@@ -49,6 +49,11 @@
             :images="photos"
           ></photo-gallery>
           <!-- v-if permet d'afficher la photo-gallery seulement si le id du projet est egale a 4 -->
+
+          <photo-gallery2
+            v-if="selectedProject.id == 5"
+            :images2="photos2"
+          ></photo-gallery2>
         </div>
       </div>
     </div>

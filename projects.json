@@ -41,5 +41,14 @@
     "paraun": "Paysage modélisé en 3D qui nous plonge dans l’atmosphère paisible d’un phare situé près de la côte.",
     "paradeux": "J’ai réalisé ce projet avec Loïc Boutin. Mon rôle a été de modéliser le phare, les mouettes et les rochers à l’aide de Maya.",
     "textbouton": "Galerie photo"
+  },
+  {
+    "id": "5",
+    "imageacceuil": ["./img/premierportfolio_affiche.png"],
+    "title": "Premier Portfolio",
+    "category": "Design graphique",
+    "image": ["./img/premierportfolio_affiche2.png"],
+    "paraun": "Portfolio réalisé dans le cadre du cours de communication graphique qui avait pour but de mettre en valeur ma personnalité et mes compétences créatives en design.",
+    "paradeux": "Dans ce projet, j’ai fait le design graphique et le design UX/UI à l’aide de Figma."
   }
 ]
